@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime Number Checker</title>
+    <link rel="stylesheet" href="global.css" />
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="p-8 bg-white rounded shadow-lg">
+      <h1 class="text-2xl font-bold mb-4">Prime Number Checker</h1>
+      <div class="mb-4">
+        <input
+          type="number"
+          id="numberInput"
+          placeholder="Enter an integer"
+          class="px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+        />
+      </div>
+      <button
+        onclick="checkPrime()"
+        class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+      >
+        Check
+      </button>
+      <p id="result" class="mt-5"></p>
+    </div>
+
+    <script>
+      function checkPrime() {
+        const number = parseInt(document.getElementById("numberInput").value);
+        const resultElement = document.getElementById("result");
+
+        if (isNaN(number) || number <= 1) {
+          resultElement.textContent =
+            "Please enter a positive integer greater than 1.";
+          resultElement.className = "text-red-500";
+          return;
+        }
+
+        let isPrime = true;
+
+        // Check if the number is prime
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+          if (number % i === 0) {
+            isPrime = false;
+            break;
+          }
+        }
+
+        if (isPrime) {
+          resultElement.textContent = `${number} is a prime number.`;
+          resultElement.className = "text-green-500";
+        } else {
+          resultElement.textContent = `${number} is not a prime number.`;
+          resultElement.className = "text-red-500";
+        }
+      }
+    </script>
+  </body>
+</html>
