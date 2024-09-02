@@ -6,3 +6,13 @@ Hi, I'm Earl Dominic Ado, a BSCS student at NEMSU Lianga. This program is create
 
 Discrete Mathematics is a branch of mathematics dealing with discrete elements that uses algebra and arithmetic. This program aims to provide practical tools and exercises to better grasp concepts in Discrete Math.
 
+## Usage
+
+To use this program, follow these steps:
+
+1. **Download the Repository**
+
+   You can clone the repository to your local machine using Git:
+
+   ```bash
+   git clone https://github.com/yourusername/discrete-math.git
