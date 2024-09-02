@@ -15,4 +15,4 @@ To use this program, follow these steps:
    You can clone the repository to your local machine using Git:
 
    ```bash
-   git clone https://github.com/yourusername/discrete-math.git
+   git clone https://github.com/eaaaarl/discrete-math.git
